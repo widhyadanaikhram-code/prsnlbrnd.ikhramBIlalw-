@@ -1,0 +1,123 @@
+/* =========================================
+   CSS KHUSUS HALAMAN PROJECTS (VERSI SCROLLABLE)
+   ========================================= */
+
+/* Menjaga agar kotak utama tetap di tengah dan ukurannya pas */
+.page-container {
+    margin-top: 120px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Diubah: 4400px terlalu besar, 1000px pas untuk 3 kartu sejajar */
+    padding: 50px 20px;
+    text-align: center; 
+}
+
+.subtitle {
+    font-size: 10px;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* Menggunakan Flexbox, mengizinkan kotak turun baris, dan area di-scroll */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;          /* KUNCI: Mengizinkan kotak turun ke bawah jika tidak muat */
+    justify-content: center;  /* Posisi di tengah */
+    gap: 50px;                /* Jarak antar kotak */
+    width: 100%;
+}
+
+/* Desain Kartu: Menggunakan ukuran tetap agar bisa turun baris */
+.project-card {
+    background: var(--bg-color);
+    border: 4px solid var(--border-color);
+    width: 280px;             /* KUNCI: Ukuran tetap agar kotak ke-4 otomatis terdorong ke bawah */
+    box-sizing: border-box;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 8px 8px 0 var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek saat kursor diarahkan ke kartu */
+.project-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 13px 13px 0 var(--shadow-color);
+    background: var(--box-bg);
+}
+
+/* Ikon dengan animasi melayang pelan */
+.card-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: floatIcon 2s infinite alternate ease-in-out;
+}
+
+@keyframes floatIcon {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+/* Area teks di dalam kartu */
+.card-content {
+    flex-grow: 1; /* Menjaga agar tombol di bawah selalu rata sejajar */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 13px;
+    color: var(--border-color);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.card-content p {
+    font-size: 10px;
+    line-height: 1.7;
+    margin: 0 0 25px 0;
+}
+
+/* Tombol khusus bergaya Pixel/Arcade */
+.pixel-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--box-bg);
+    border: 3px solid var(--border-color);
+    color: var(--border-color);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.pixel-btn:hover {
+    background: var(--border-color);
+    color: white;
+}
+
+.box {
+    margin-top: 10px !important;
+}
+
+/* --- RESPONSIVITAS HP --- */
+/* Kalau dibuka di HP yang layarnya kecil, biarkan otomatis membungkus ke bawah */
+@media (max-width: 850px) {
+    .project-grid {
+        gap: 15px;
+        padding: 10px 0; /* Kurangi padding di layar kecil */
+    }
+    .project-card {
+        width: 100%; /* Kartu memenuhi lebar layar di HP */
+        max-width: 320px;
+    }
+}

@@ -1,0 +1,191 @@
+/* =========================================
+   TAMBAHAN KHUSUS UNTUK HALAMAN CONTACT
+   ========================================= */
+/* Penanda Navigasi Aktif (Agar user tahu sedang di halaman mana) */
+.active-nav {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+/* Styling untuk container formulir */
+.pixel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto; /* Posisi di tengah */
+}
+
+/* Menyusun label dan isian */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 10px;
+    color: var(--border-color);
+}
+
+/* Styling untuk Input (Kotak Teks) dan Textarea (Kotak Pesan) */
+.form-group input,
+.form-group textarea {
+    font-family: 'Press Start 2P', cursive;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border: 3px solid var(--border-color);
+    padding: 12px;
+    font-size: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efek saat kotak isian sedang diklik/difokuskan */
+.form-group input:focus,
+.form-group textarea:focus {
+    background: var(--header-bg);
+    color: white;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    transform: translate(-2px, -2px);
+}
+
+/* Tombol Kirim spesifik untuk form */
+.pixel-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Floating emoji background khusus halaman contact */
+.floating-bg {
+    position: fixed;
+    top: -50px;
+    font-size: 28px;
+    z-index: -1;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: floatDown 12s linear infinite;
+}
+
+/* Mengubah warna teks placeholder agar sedikit redup */
+::placeholder {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+.contact-container {
+    /* Mendorong kotak ini sejauh mungkin ke bawah layar */
+    margin-top: 120px; 
+    margin-bottom: 20px; 
+    padding: 0 20px;
+    width: 100%;
+}
+/* --- GLOBAL --- */
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* ========================================= 
+   SOCIAL MEDIA LINKS STYLING
+   ========================================= */
+.social-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.social-links h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--border-color);
+    letter-spacing: 2px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 15px;
+    border: 2px solid transparent;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    border: 2px solid var(--border-color);
+    box-shadow: 4px 4px 0 rgba(76, 175, 80, 0.3);
+}
+
+.social-icon svg {
+    width: 50px;
+    height: 50px;
+    color: var(--border-color);
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+
+.social-icon.instagram svg {
+    color: #E4405F;
+}
+
+.social-icon.instagram:hover svg {
+    color: #E4405F;
+    filter: drop-shadow(0 0 8px #E4405F);
+}
+
+.social-icon.whatsapp svg {
+    color: #25D366;
+}
+
+.social-icon.whatsapp:hover svg {
+    color: #25D366;
+    filter: drop-shadow(0 0 8px #25D366);
+}
+
+.social-icon span {
+    font-size: 9px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Responsive design untuk mobile */
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 20px;
+    }
+
+    .social-icon {
+        padding: 10px;
+    }
+
+    .social-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icon span {
+        font-size: 8px;
+    }
+}
+

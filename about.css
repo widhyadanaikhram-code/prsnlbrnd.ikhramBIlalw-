@@ -1,0 +1,110 @@
+/* =========================================
+   TAMBAHAN KHUSUS UNTUK HALAMAN ABOUT 
+   ========================================= */
+
+/* Container utama untuk halaman About agar tidak terlalu menempel ke header */
+.about-container {
+    margin-top: 120px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Layout Flexbox untuk Avatar dan Teks di halaman About */
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.about-avatar {
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated;
+    border: 5px solid var(--border-color);
+    box-shadow: 8px 8px 0 var(--shadow-color);
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 12px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+/* Kotak Detail (Fun Facts) */
+.about-details {
+    text-align: left;
+    width: 100%;
+
+}
+
+.about-details h3 {
+    color: var(--border-color);
+    margin-bottom: 20px;
+}
+
+/* Styling untuk list bergaya pixel */
+.pixel-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.pixel-list li {
+    font-size: 11px;
+    line-height: 2;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+    
+}
+
+.pixel-list li::before {
+    content: "►";
+    position: absolute;
+    left: 0;
+    color: var(--border-color);
+    animation: blink-caret 1s step-end infinite;
+}
+
+/* Penanda Navigasi Aktif (Agar user tahu sedang di halaman mana) */
+.active-nav {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+/* Responsivitas untuk layar HP */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Mengubah susunan menjadi atas-bawah di HP */
+        text-align: center;
+    }
+    
+    .pixel-list li {
+        text-align: left;
+    }
+}
+
+.box {
+    margin-top: 10px !important;
+}

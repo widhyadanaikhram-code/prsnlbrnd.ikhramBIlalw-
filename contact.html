@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="Home.css">
+
+</head>
+<body>
+
+    <header>
+        <h1>🌸 PIXEL PORTFOLIO</h1>
+        <nav>
+            <a href="Index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="project.html">PROJECTS</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
+    
+
+    <div class="floating-bg" style="left: 10%; animation-duration: 10s;">💌</div>
+    <div class="floating-bg" style="left: 85%; animation-duration: 8s;">📡</div>
+    <div class="floating-bg" style="left: 50%; animation-duration: 12s;">💬</div>
+
+
+    <main class="contact-container">
+        <section class="box">
+            <h2>📮 HUBUNGI SAYA</h2>
+            <p style="font-size: 11px; margin-bottom: 25px;">Punya ide proyek kolaborasi atau sekadar ingin menyapa? Tinggalkan pesan di bawah ini!</p>
+            
+            <form id="contactForm" class="pixel-form" action="https://formspree.io/f/mvzyoeag" method="POST">
+                <div class="form-group">
+                    <label for="senderName">NAMA PEMAIN</label>
+                    <input type="text" id="senderName" name="name" placeholder="Masukkan namamu..." required>
+                </div>
+                <div class="form-group">
+                    <label for="senderEmail">ALAMAT EMAIL</label>
+                    <input type="email" id="senderEmail" name="email" placeholder="nama@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="senderMessage">MISI RAHASIA (PESAN)</label>
+                    <textarea id="senderMessage" name="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+                </div>
+                <button type="submit" id="submitBtn">KIRIM PESAN 🚀</button>
+            </form>
+
+            <!-- Social Media Links Section -->
+            <div class="social-links">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ikh.ram169?igsh=cXg5Y2hmbXJnNmVy" target="_blank" class="social-icon instagram" title="Instagram">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pixel Style Instagram Icon -->
+                            <rect x="2" y="2" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                        </svg>
+                        <span>INSTAGRAM</span>
+                    </a>
+                    <a href="https://wa.me/62882006636006" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pixel Style WhatsApp Icon -->
+                            <path d="M6 2 L18 2 L20 4 L20 20 L4 20 L2 18 L2 4 Z" fill="none" stroke="currentColor" stroke-width="1"/>
+                            <path d="M7 7 L9 9 L7 11 M15 7 L13 9 L15 11 M11 13 L11 15" fill="none" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                        <span>WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 style="color: #4CAF50;">✅ SYSTEM MSG</h2>
+            <p>Pesan Diterima! Pesanmu sudah berhasil dikirim ke server pusat. Saya akan segera membalasnya. ✨👾</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌈 Made 2026</p>
+    </footer>
+
+    <script src="loading.js"></script>
+    <script src="animasi.js"></script>
+</body>
+</html>

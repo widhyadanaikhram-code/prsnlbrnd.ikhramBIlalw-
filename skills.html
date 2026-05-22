@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌸 PIXEL PORTFOLIO</h1>
+        <nav>
+            <a href="Index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skills.html" class="active-nav">SKILLS</a>
+            <a href="project.html">PROJECTS</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
+
+    <div class="floating-bg" style="left: 10%; animation-duration: 10s;">🛡️</div>
+    <div class="floating-bg" style="left: 85%; animation-duration: 8s;">⚙️</div>
+    <div class="floating-bg" style="left: 50%; animation-duration: 12s;">🌐</div>
+
+    <main class="skills-container">
+        <section class="box">
+            <h2>🍓 PLAYER STATS</h2>
+            <p style="font-size: 10px; margin-bottom: 30px;">Berikut adalah sekilas informasi status keahlian yang telah saya kumpulkan selama saya hidup:</p>
+
+            <div class="skill-category">
+                <h3>📸 Cinematography</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Photo</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Video</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 50%;"></div></div>
+                        <span class="skill-percentage">50%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Editing</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+                        <span class="skill-percentage">65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🌐 Networking</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Winbox</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Routing</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                        <span class="skill-percentage">70%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Crimping Tools</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>⚙️🧠💪</h3>
+                <div class="skill-list">
+                    <div class="skill-item">
+                        <span class="skill-name">Problem Solving</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Discussion</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>🌈 Made 2026</p>
+    </footer>
+
+    <script src="loading.js"></script>
+    <script src="animasi.js"></script>
+    <script>
+        // Logika Dark Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerText = '☀️';
+        }
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            let theme = 'light';
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.innerText = '☀️'; theme = 'dark';
+            } else {
+                themeToggle.innerText = '🌙';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>

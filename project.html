@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌸 PIXEL PORTFOLIO</h1>
+        <nav>
+            <a href="Index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="project.html" class="active-nav">PROJECTS</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <button id="theme-toggle">🌙</button>
+    </header>
+
+    <div class="floating-bg" style="left: 15%; animation-duration: 10s;">🎮</div>
+    <div class="floating-bg" style="left: 80%; animation-duration: 8s;">🏆</div>
+
+    <main class="page-container">
+        <section class="box projects-wrapper">
+            <h2>🕹️ STAGE SELECT</h2>
+            <p class="subtitle">Pilih misi yang ingin kamu jelajahi lebih detail.</p>
+            
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <div class="card-icon">🚗</div>
+                    <div class="card-content">
+                        <h3>Automotive Tech</h3>
+                        <p>Website interaktif seputar teknologi otomotif, dari mesin bensin hingga EV.</p>
+                    </div>
+                   <a href="https://automotivetechnew.page.gd/" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+                
+                <div class="project-card">
+                    <div class="card-icon">🏠</div>
+                    <div class="card-content">
+                        <h3>Smart Home IoT</h3>
+                        <p>Sistem otomatisasi rumah cerdas menggunakan ESP32 dan sensor jarak.</p>
+                    </div>
+                   
+                    <a href="- Projek IOT https://drive.google.com/drive/folders/1EUIdOLVehgh58Zmj9nvHkgWgV2-93poZ" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-icon">💻</div>
+                    <div class="card-content">
+                        <h3>Digital Ecommerce</h3>
+                        <p>Ecommerce digital dengan pilihan produk yang banyak dan terjangkau.</p>
+                    </div>
+                    <a href="https://s.id/seilooo" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+
+                 <div class="project-card">
+                    <div class="card-icon">📄</div>
+                    <div class="card-content">
+                        <h3>Design Poster Kemerdekaan</h3>
+                        <p>Simulasi penetration testing dan analisis keamanan jaringan web dasar.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1ccwIM3QnCqeV7lQ-PFi02NzARl5eZb-A" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+                <div class="project-card">
+                    <div class="card-icon">📆</div>
+                    <div class="card-content">
+                        <h3>Sejarah Reformasi</h3>
+                        <p>Sebuah website yang berisi sejarah reformasi di Indonesia pada masa Megawati Soekarnoputri. </p>
+                        </p>
+                    </div>
+                    <a href="https://dinamikapadazamanreformasi1.page.gd/" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-icon">🪘</div>
+                    <div class="card-content">
+                        <h3>Karawitan</h3>
+                        <p>Sebuah website yang berisi tentang budaya karawitan di indonesia. </p>
+                        </p>
+                    </div>
+                    <a href="https://sway.cloud.microsoft/wEvWyJvGDy7iusRq?ref=Link&loc=play" target="_blank" class="pixel-btn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">START STAGE ▶</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌈 Made 2026</p>
+    </footer>
+
+    <script src="loading.js"></script>
+    <script src="animasi.js"></script>
+    <script>
+        // Logika Dark Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerText = '☀️';
+        }
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            let theme = 'light';
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.innerText = '☀️'; theme = 'dark';
+            } else {
+                themeToggle.innerText = '🌙';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+</body>
+</html>
